@@ -1,0 +1,239 @@
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+:focus {
+    outline-width: 0;
+  }
+
+/* -------------------------------------- */
+
+.page-header {
+  background: #e1e2e3;
+  padding: 2rem;
+}
+
+.content-area {
+  background: #a3bef0;
+  height: 150rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+  transform: scale(0.8);
+  width: 8rem;
+}
+
+.logo__sub {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+/* ------------------------------ */
+
+.email-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.603);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.email-modal--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.email-modal__close-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  cursor: pointer;
+  background-color: red;
+}
+
+.email-modal__close-btn .gg-close {
+  color: white;
+}
+
+.gg-close {
+  --ggs: 2;
+}
+
+.email-modal__container {
+  background-color: rgba(29, 103, 200, 1);
+  max-width: 80rem;
+  width: 100%;
+  color: white;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.email-modal__info {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+.email-modal__info .logo {
+  margin-bottom: 4rem;
+}
+
+.email-modal h2 {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+.email-modal__message {
+  color: rgba(221, 221, 221, 0.63);
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+.email-modal__highlight-text {
+  color: white;
+}
+
+.email-modal__form-group {
+  background-color: white;
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.email-modal__input {
+  background-color: white;
+  border: 0rem solid;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+}
+
+.email-modal__button {
+  background: rgba(81, 158, 71, 1);
+  border: none;
+  color: white;
+  width: 15rem;
+  cursor: pointer;
+}
+
+.email-modal__button:hover {
+  transition: 0.2s ease-in;
+  background: rgb(74, 143, 65);
+}
+
+.email-modal__decline-offer {
+  color: rgba(221, 221, 221, 0.6);
+  text-decoration: underline;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.email-modal__decline-offer:hover {
+  color: white;
+  transition: 0.2s ease-in;
+}
+
+.email-modal__side-img img {
+  width: 35rem;
+  height: 100%;
+}
+
+/* ------------------------------------- */
+
+.email-modal__error-message {
+    font-size: 1.8rem;
+    color: red;
+    font-weight: 600;
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.email-modal__error-message--show {
+    display: block;
+}
+
+/* ------------------------------------- */
+
+.email-thank {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fbe743;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-thank--success {
+  transform: translate3d(0%, 0, 0);
+}
+
+.email-thank__title {
+  color: black;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity .3s ease-in-out .4s;
+}
+
+.email-thank__message {
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity .3s ease-in-out .7s;
+}
+
+.email-thank--success .email-thank__title, 
+.email-thank--success .email-thank__message {
+    opacity: 1;
+}
+
+/* ----------------------------------- */
+
+
